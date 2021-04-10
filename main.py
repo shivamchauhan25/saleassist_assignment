@@ -1,33 +1,32 @@
 from typing import Optional
 from fastapi import FastAPI
-from maths import factorial
+from maths import fibonnaci,fibo_recursive,factorial
+from strings import len_string,len_string_manual
+
+salesassist_app = FastAPI()
+
+#Fibonnaci using O(1)
+@salesassist_app.get("/fibo")
+def fibo():
+    return fibonnaci(9)
+
+#fibonnaci using recursion
+@salesassist_app.get("/fibo/recursive")
+def fibo_recursion():
+    return fibo_recursive(9)
 
 
-app = FastAPI()
-
-
-@app.get("/testing")
-
-def testing():
+#factorial of a number
+@salesassist_app.get("/factorial")
+def factorial_num():
     return factorial(5)
 
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
 
-@app.post("/demo")
-def demo():
-    return {"This is ":"Demo"}
+#len of a sting
+@salesassist_app.get("/len_string")
+def len_of_string():
+    return len_string("Shivam")
 
-
-@app.get("/items/{item_id}")
-def read_item(item_id: int, q: Optional[str] = None):
-    return {"item_id": item_id, "q": q}
-
-@app.get("/fib")
-def fib(n):
-    n=5
-    return round((1.618034**n - (-0.618034)**n)/2.236068)
 
 
 
