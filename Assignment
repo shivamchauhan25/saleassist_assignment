@@ -1,0 +1,25 @@
+Hello there! We are excited to see you here.
+ 
+Please go through the problem statement and try implementing the solution with focus on considerations mentioned below.
+We would be pairing with you on the next steps on the solution (which are not shared here).
+We don’t mind if the solution to the problem statement is not complete but all the considerations are met. We would work with you during the code pairing and try to complete the solution along with you.
+ 
+Problem statement:
+Design an API in fastAPI + python.
+requirements:
+create two modules: 1. maths 2. strings
+ 
+math module supports two endpoints
+1. calculate and return nth Fibonacci (n > 1 < 100) with time complexity of worse: O(N) best: O(1)
+2. calculate and return the factorial of a given number with time complexity of O(n*n)
+ 
+string module supports two endpoints
+1. calculate and return the length of a string
+2. generate and return a string of a given length of a chosen character as input
+ 
+Considerations:
+Self-documented code (use documentation capabilities from fastAPI if possible)
+Readable code
+Follow coding standards
+Follow TDD
+
