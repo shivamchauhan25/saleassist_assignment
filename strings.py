@@ -10,3 +10,5 @@ def len_string_manual(str):
         count+=1
     return count
 
+def string_gen(n,char):
+    return n*char
